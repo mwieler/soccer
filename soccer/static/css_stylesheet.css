@@ -1,0 +1,48 @@
+/*text-align: center, right, justify  */
+.page           { margin: 2em auto; width: 40em; border: 5px solid #ccc;
+                  padding: 0.8em; background: white; }
+.entries        { list-style: none; margin: 0; padding: 0; }
+.entries li     { margin: 0.8em 1.2em; }
+.entries li h2  { margin-left: -1em; }
+.add-entry      { font-size: 0.9em; border-bottom: 1px solid #ccc; }
+.add-entry dl   { font-weight: bold; }
+.metanav        { text-align: right; font-size: 0.8em; padding: 0.3em;
+                  margin-bottom: 1em; background: #fafafa; }
+.flash          { background: #CEE5F5; padding: 0.5em;
+                  border: 1px solid #AACBE2; }
+.error          { background: #F0D6D6; padding: 0.5em; }
+
+
+/*
+1. selector (thing before curly braces)
+2. declaration
+3. 
+
+two big ideas:
+1. is element in the flow or out of the flow?
+2. is element rendering a block display context or an inline display context?
+
+
+box model
+
+
+inline vs block
+inline boxes go with the flow
+e.g <a> <span> <img> <input>
+
+block
+block boxes need their space, take up their own line
+e.g <h1> <p> <ul> <li> <div>
+
+p {
+  fonts are user-operating-system dependent
+  font-family:;
+  property: value
+  font:;
+  border-width:;
+  border-style
+  border-color
+
+  units: on any screen, a pixel is a pixel;
+}
+*/
