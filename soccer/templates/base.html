@@ -1,11 +1,17 @@
 <html>
     <head>
-        {% if title %}
-            <title>{{title}}</title>
-            {% else %}
-                <title>Default Title</title>
-        {% endif %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>{% block title %}{% endblock %} - BRW Soccer Tournament</title>
     </head>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
     <body>
         {% block content %}{% endblock %}
     </body>

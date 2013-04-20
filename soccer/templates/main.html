@@ -1,75 +1,45 @@
-<!--
-  IDEAS:
-    1. model after: Josh Breckman, turbovote, getprismatic.com, city winery (for form validation)
-    2. First ask for name & email address, then go to signup page, where you enter teammmates' names. OR you're told that you've already been signed up for a team.
-    3. email notification system to confirm email addresses
-  STACK:
-    1. heroku
-    2. python
-    3. flask
-    4. stripe
-    5. mongoDB (see tumblelog tutorial) or SQL database
-    5. flask-mail(?)
-    6. mandrill (mailchimp for apps)
-    7. optional: amazon storage for photos, etc., google analytics, jquery
-  HOSTING: linode, digital ocean
-  RANDOM: MTR
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+  <h1> Benjamin Robert Wieler Soccer Tournament</h1>
+      <img src="ben3.jpg" alt="alt-text" width="540">
+    <ol id="navigationcontainer">
+      <li><a href="http://www.google.com">Home</a></li>
+      <li><a href="http://www.nytimes.com">Sign Up</a></li>
+      <li><a href="http://www.madisonmontessorinj.org/benjamin-robert-wieler-scholarship">Montessori Scholarship</a></li>
+      <li><a href="#">About</a></li>
+    </ol>
 
-IMPORTANT HTML ELEMENTS:
-1. div - use to break up different sections, to refer to them distinctly in CSS?
-
--->
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-type=" content="text/html; charset=utf-8">
-  <meta>
-
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="static/css_stylesheet.css">
-</head>
-
-<title>Benjamin Wieler Soccer Tournament - Home</title>
-<h1> Benjamin Robert Wieler Soccer Tournament</h1>
-    <img src="ben3.jpg" alt="alt-text" width="540">
-  <ol id="navigationcontainer">
-    <li><a href="http://www.google.com">Home</a></li>
-    <li><a href="http://www.nytimes.com">Sign Up</a></li>
-    <li><a href="http://www.madisonmontessorinj.org/benjamin-robert-wieler-scholarship">Montessori Scholarship</a></li>
-    <li><a href="#">About</a></li>
-  </ol>
-
-<div class=page>
+  <div class=page>
 
 
-  <h2>Information</h2>
+    <h2>Information</h2>
 
-  <p>The Benjamin Wieler Soccer Tournament takes place on the Saturday after Thanksgiving at Madison High School in Madison, New Jersey.  It funds a scholarship established in his name [by Nicole Cecala and others].</p>
+    <p>The Benjamin Wieler Soccer Tournament takes place on the Saturday after Thanksgiving at Madison High School in Madison, New Jersey.  It funds a scholarship established in his name [by Nicole Cecala and others].</p>
 
-  <p>Each year, a scholarship is awarded to a college-bound Madison High School senior.</p>
+    <p>Each year, a scholarship is awarded to a college-bound Madison High School senior.</p>
 
-  <h2>Sign Up</h2>
-  <p>Anyone who wants to is welcome to sign up for the tournament.  We can accommodate two hundred people (forty teams of five).  To begin, please enter your name and email address below.</p>
+    <h2>Sign Up</h2>
+    <p>Anyone who wants to is welcome to sign up for the tournament.  We can accommodate two hundred people (forty teams of five).  To begin, please enter your name and email address below.</p>
 
-  <p>A $50 donation is required to register a team ($10/player). Your donation funds a scholarship that is awarded each year to a college-bound Madison High School senior. </p>
-  <div class=metanav>
-    <form id='register' method='post' action='signup'>
-    <!--name is key, value is user input-->
-      <label for="firstname-input">First Name</label>
-      <input type="text" id="firstname-input">
-      <label for="lastname-input">Last Name</label>
-      <input type="text" id="lastname-input">
-      <label for="emailaddr-input">Email Address</label>
-      <input type="text" id="emailaddr-input">
-      <input type="checkbox" id="oktocontact-input">
-      <input type="submit" id="submit-button">
-      <label for="oktocontact-input">It's ok to contact me about Madison Montessori School's <a href="http://www.madisonmontessorinj.org/benjamin-robert-wieler-scholarship">Benjamin Robert Wieler Scholarship</a>, a separate scholarship for preschoolers.</label> <!-- add a 'what's this?' link -->
-    </form>
+    <p>A $50 donation is required to register a team ($10/player). Your donation funds a scholarship that is awarded each year to a college-bound Madison High School senior. </p>
+    <div class=metanav>
+      <form id='register' method='post' action='signup'>
+      <!--name is key, value is user input-->
+        <label for="firstname-input">First Name</label>
+        <input type="text" id="firstname-input">
+        <label for="lastname-input">Last Name</label>
+        <input type="text" id="lastname-input">
+        <label for="emailaddr-input">Email Address</label>
+        <input type="text" id="emailaddr-input">
+        <input type="checkbox" id="oktocontact-input">
+        <input type="submit" id="submit-button">
+        <label for="oktocontact-input">It's ok to contact me about Madison Montessori School's <a href="http://www.madisonmontessorinj.org/benjamin-robert-wieler-scholarship">Benjamin Robert Wieler Scholarship</a>, a separate scholarship for preschoolers.</label> <!-- add a 'what's this?' link -->
+      </form>
+    </div>
   </div>
-</div>
-<footer>
-  <p>Website created by Matthew Wieler</p>
-</footer>
-</html>
+  <footer>
+    <p>Website created by Matthew Wieler</p>
+  </footer>
+  </html>
+{% endblock %}
