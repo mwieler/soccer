@@ -1,4 +1,3 @@
-from soccer import soccerapp
 from flask import render_template
 from forms import LoginForm
 
